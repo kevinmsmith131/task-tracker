@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tracker.apps.TrackerConfig',
-    'authentication.apps.AuthenticationConfig'
+    'authentication.apps.AuthenticationConfig',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'tasktracker.urls'
@@ -121,11 +122,13 @@ LOGIN_URL = 'authentication/login'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    '/authentication/static/',
-    'tracker/static/'
+    os.path.join(BASE_DIR, '/authentication/static/'),
+    os.path.join(BASE_DIR, 'tracker/static/'),
 ]
 
 STATICFILES_FINDERS = [
