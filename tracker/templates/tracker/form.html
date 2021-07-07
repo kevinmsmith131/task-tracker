@@ -1,7 +1,16 @@
-<h3>Task Form</h3>
-<a href="{% url 'tasks' %}">Back</a>
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Add"/>
-</form>
+{% extends 'tracker/main.html' %}
+{% block content %}
+    <div class="header-bar">
+        <a id="form-header" href="{% url 'tasks' %}">&#x27F5;</a>
+    </div>
+    <div class="card-body">
+        <form method="POST">
+            {% csrf_token %}
+            <label>{{form.title.label}}</label>
+            {{form.title}}
+            <label>{{form.description.label}}</label>
+            {{form.description}}
+            <input class="button" type="submit" value="Add"/>
+        </form>
+    </div>
+{% endblock content %}

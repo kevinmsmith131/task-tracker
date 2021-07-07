@@ -1,0 +1,21 @@
+{% extends 'authentication/main.html' %}
+{% block content %}
+    <div class="header-bar">
+        <h1>Sign up</h1>
+    </div>
+    <div class="card-body">
+        <div class="register-form">
+            <form method="POST">
+                {% csrf_token %}
+                <label>{{form.username.label}}</label>
+                {{form.username}}
+                <label>{{form.password1.label}}</label>
+                {{form.password1}}
+                <label>{{form.password2.label}}</label>
+                {{form.password2}}
+                <input class="button" type="submit" value="Sign up"/>
+            </form>
+            <p>Have an account? <a href="{% url 'login' %}">Log in</a></p>
+        </div>
+    </div>
+{% endblock content %}

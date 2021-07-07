@@ -1,6 +1,19 @@
-<h1>Login</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Login"/>
-</form>
+{% extends 'authentication/main.html' %}
+{% block content %}
+    <div class="header-bar">
+        <h1>Log in</h1>
+    </div>
+    <div class="card-body">
+        <div class="login-form">
+            <form method="POST">
+                {% csrf_token %}
+                <label>{{form.username.label}}</label>
+                {{form.username}}
+                <label>{{form.password.label}}</label>
+                {{form.password}}
+                <input class="button" type="submit" value="Log in"/>
+            </form>
+            <p>Don't have an account? <a href="{% url 'register' %}">Sign up</a></p>
+        </div>
+    </div>
+{% endblock content %}
