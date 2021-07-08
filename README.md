@@ -9,8 +9,14 @@ The Log in page allows a user to enter a username and password, and then submit 
 The Sign up page allows a user to enter a username, password, confirmation password, and then submit this information to be logged in. There is also a link to the Log in page that a user can follow if they already have an account.
 
 ### Task List
+
+
 ### Add Task Page
+The user is able to go back to the task list by pressing the back button, if they no longer wish to add a task. Otherwise, the user is able to enter the title of the new task, a description of the new task, and then submit this information to be added to the task list.
+
 ### Update Task Page
+The user is able to go back to the task list by pressing the back button, if they no longer wish to update the selected task. Otherwise, the user is able to change the title and description of the task, and then submit this updated task to replace the old task on the task list.
+
 ### Delete Task Page
 The delete task page allows a user to go back to the task list if they do not want to delete the selected task, or press confirm if they do wish to delete the task.
 
