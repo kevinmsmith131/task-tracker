@@ -7,8 +7,6 @@ from django.urls import reverse_lazy
 import tkinter
 from tkinter import messagebox
 
-root = tkinter.Tk()
-root.withdraw()
 
 class CustomLoginView(LoginView):
     template_name = 'authentication/login.html'
@@ -16,6 +14,9 @@ class CustomLoginView(LoginView):
     redirect_authenticated_user = True
 
     def form_valid(self, form):
+        root = tkinter.Tk()
+        root.withdraw()
+        root.mainloop()
         user = form.save
         if user is None:
             messagebox.showinfo('Log In Error', "There is no user with those credentials.")
@@ -32,10 +33,11 @@ class RegistrationPage(FormView):
 
     def form_valid(self, form):
         user = form.save()
+        root = tkinter.Tk()
+        root.withdraw()
+        root.mainloop()
         if user is not None:
             login(self.request, user)
-            messagebox.showinfo('Sign Up Error', 'Ensure that passwords match, and have 8 characters, including a '
-                'special character. Otherwise, try a different username, since all users must have a unique username.')
         else:
             messagebox.showinfo('Sign Up Error', 'Ensure that passwords match, and have 8 characters, including a '
                 'special character. Otherwise, try a different username, since all users must have a unique username.')
