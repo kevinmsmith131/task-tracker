@@ -12,7 +12,7 @@ The Sign up page allows a user to enter a username, password, confirmation passw
 ### Add Task Page
 ### Update Task Page
 ### Delete Task Page
-The delete task page allows a user to either go back if they do not want to delete the selected task, or press confirm if they do wish to delete the task.
+The delete task page allows a user to go back to the task list if they do not want to delete the selected task, or press confirm if they do wish to delete the task.
 
 ## Technologies
 Both the frontend and backend were built using Django, and the backend adheres to RESTful API practices. The data for the application is stored in a PostgreSQL database. The app is deployed to the cloud using Heroku.
