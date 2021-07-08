@@ -16,13 +16,13 @@ The header displays a greeting to the signed in user. Below the greeting is a me
 When a user enters a phrase into the search bar, and hits search, only the tasks that start with that phrase are displayed on the task list. When the plus icon is clicked, the user is brought to the add task page.
 
 #### Tasks
-Each task has a completed status indicator, which is a green circle when the task has been completed, and a gray circle when the task has not been completed. When this circle is clicked, the completed status of the task is toggled to the opposite of what it previously was. 
+Each task has a completed status indicator, which is a green circle when the task has been completed, and a gray circle when the task has not been completed. When this circle is clicked, the completed status of the task is toggled to the opposite of what it previously was. Each task also has a title, which is italicized and struckthrough if the task is complete, and has no effect if it is not complete. When the title of the task is clicked, the user is brought to the update task page. There is also a red delete icon, which when clicked, brings the user to the delete page for the task.
 
 ### Add Task Page
 The user is able to go back to the task list by pressing the back button, if they no longer wish to add a task. Otherwise, the user is able to enter the title of the new task, a description of the new task, and then submit this information to be added to the task list.
 
 ### Update Task Page
-The user is able to go back to the task list by pressing the back button, if they no longer wish to update the selected task. Otherwise, the user is able to change the title and description of the task, and then submit this updated task to replace the old task on the task list.
+The user is able to go back to the task list by pressing the back button, if they no longer wish to update the selected task. Otherwise, the user is able to change the title and description of the task, and then submit this updated task to replace the old task on the task list. The update task page can also be used as a way to view the description of the task for users wishing to find out more about the task.
 
 ### Delete Task Page
 The delete task page allows a user to go back to the task list if they do not want to delete the selected task, or press confirm if they do wish to delete the task.
