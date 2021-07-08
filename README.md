@@ -9,6 +9,14 @@ The Log in page allows a user to enter a username and password, and then submit 
 The Sign up page allows a user to enter a username, password, confirmation password, and then submit this information to be logged in. There is also a link to the Log in page that a user can follow if they already have an account.
 
 ### Task List
+#### Header
+The header displays a greeting to the signed in user. Below the greeting is a message that displays the number of incomplete tasks. The word "Logout" is present in the top right corner, and when it is clicked, the signed in user is logged out.
+
+#### Search and Add Area
+
+
+#### Tasks
+
 
 
 ### Add Task Page
