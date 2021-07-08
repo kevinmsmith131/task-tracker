@@ -2,6 +2,12 @@
 A task management app that allows users to create a list of tasks, and track which tasks on the list have been completed.
 
 ## Features
+### Log in Page
+### Sign up Page
+### Task List
+### Add Task Page
+### Update Task Page
+### Delete Task Page
 
 ## Technologies
 Both the frontend and backend were built using Django, and the backend adheres to RESTful API practices. The data for the application is stored in a PostgreSQL database. The app is deployed to the cloud using Heroku.
