@@ -4,7 +4,11 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.views.generic.edit import FormView
 from django.urls import reverse_lazy
+import tkinter
+from tkinter import messagebox
 
+root = tkinter.Tk()
+root.withdraw()
 
 class CustomLoginView(LoginView):
     template_name = 'authentication/login.html'
@@ -25,6 +29,9 @@ class RegistrationPage(FormView):
         user = form.save()
         if user is not None:
             login(self.request, user)
+        else:
+            messagebox.showinfo('Sign Up Error', 'Ensure that passwords match, and have 8 characters, including a '
+                'special character. Otherwise, try a different username, since all users must have a unique username.')
         return super(RegistrationPage, self).form_valid(form)
 
     def get(self, *args, **kwargs):
