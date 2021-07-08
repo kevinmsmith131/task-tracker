@@ -34,6 +34,8 @@ class RegistrationPage(FormView):
         user = form.save()
         if user is not None:
             login(self.request, user)
+            messagebox.showinfo('Sign Up Error', 'Ensure that passwords match, and have 8 characters, including a '
+                'special character. Otherwise, try a different username, since all users must have a unique username.')
         else:
             messagebox.showinfo('Sign Up Error', 'Ensure that passwords match, and have 8 characters, including a '
                 'special character. Otherwise, try a different username, since all users must have a unique username.')
