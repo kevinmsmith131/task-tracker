@@ -15,6 +15,11 @@ class CustomLoginView(LoginView):
     fields = '__all__'
     redirect_authenticated_user = True
 
+    def form_valid(self, form):
+        user = form.save
+        if user is None:
+            messagebox.showinfo('Log In Error', "There is no user with those credentials.")
+
     def get_success_url(self):
         return reverse_lazy('tasks')
 
