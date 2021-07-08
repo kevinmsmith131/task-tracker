@@ -76,3 +76,4 @@ class TaskToggle(LoginRequiredMixin, ListView):
         return context
 
     success_url = reverse_lazy('tasks')
+    
