@@ -3,7 +3,11 @@ A task management app that allows users to create a list of tasks, and track whi
 
 ## Features
 ### Log in Page
+The Log in page allows a user to enter a username and password, and then submit this information to be logged in. There is also a link to the Sign up page that a user can follow if they do not have an account yet.
+
 ### Sign up Page
+The Sign up page allows a user to enter a username, password, confirmation password, and then submit this information to be logged in. There is also a link to the Log in page that a user can follow if they already have an account.
+
 ### Task List
 ### Add Task Page
 ### Update Task Page
