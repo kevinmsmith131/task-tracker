@@ -4,7 +4,7 @@ A task management app that allows users to create a list of tasks, and track whi
 ## Features
 
 ## Technologies
-Both the frontend and backend were built using Django, and the backend adheres to RESTful API practices.
+Both the frontend and backend were built using Django, and the backend adheres to RESTful API practices. The data for the application is stored in a PostgreSQL database. The app is deployed to the cloud using Heroku.
 
 ## How do I start tracking?
 You can access the application using this url: https://heroku-task-tracker.herokuapp.com/
