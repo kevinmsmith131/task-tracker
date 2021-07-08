@@ -13,7 +13,7 @@ The Sign up page allows a user to enter a username, password, confirmation passw
 The header displays a greeting to the signed in user. Below the greeting is a message that displays the number of incomplete tasks. The word "Logout" is present in the top right corner, and when it is clicked, the signed in user is logged out.
 
 #### Search and Add Area
-
+When a user enters a phrase into the search bar, and hits search, only the tasks that start with that phrase are displayed on the task list. When the plus icon is clicked, the user is brought to the add task page.
 
 #### Tasks
 
