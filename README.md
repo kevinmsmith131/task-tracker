@@ -6,3 +6,4 @@ A task management app that allows users to create a list of tasks, and track whi
 ## Technologies
 
 ## How do I start tracking?
+You can use access the application using this url: https://heroku-task-tracker.herokuapp.com/
