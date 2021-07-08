@@ -4,22 +4,12 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.views.generic.edit import FormView
 from django.urls import reverse_lazy
-import tkinter
-from tkinter import messagebox
 
 
 class CustomLoginView(LoginView):
     template_name = 'authentication/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
-
-    def form_valid(self, form):
-        root = tkinter.Tk()
-        root.withdraw()
-        root.mainloop()
-        user = form.save
-        if user is None:
-            messagebox.showinfo('Log In Error', "There is no user with those credentials.")
 
     def get_success_url(self):
         return reverse_lazy('tasks')
@@ -33,14 +23,8 @@ class RegistrationPage(FormView):
 
     def form_valid(self, form):
         user = form.save()
-        root = tkinter.Tk()
-        root.withdraw()
-        root.mainloop()
         if user is not None:
             login(self.request, user)
-        else:
-            messagebox.showinfo('Sign Up Error', 'Ensure that passwords match, and have 8 characters, including a '
-                'special character. Otherwise, try a different username, since all users must have a unique username.')
         return super(RegistrationPage, self).form_valid(form)
 
     def get(self, *args, **kwargs):
